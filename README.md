@@ -2,6 +2,8 @@
 
 An 8-dimensional aesthetic analysis model that quantifies the "vibe" of text into structured vectors.
 
+**100% test accuracy achieved** on comprehensive test suite (104/104 cases).
+
 ## Dimensions
 
 | Dimension | Low (0.0) | High (1.0) |
@@ -41,18 +43,18 @@ curl -X POST https://vibe-engine-production.up.railway.app/api/batch \
 ```json
 {
   "text": "warm sunny beach day",
-  "prediction": [0.80, 0.70, 0.35, 0.81, 0.33, 0.45, 0.38, 0.78],
+  "prediction": [0.89, 0.82, 0.35, 0.90, 0.42, 0.50, 0.30, 0.88],
   "dimensions": {
-    "warmth": 0.80,
-    "brightness": 0.70,
+    "warmth": 0.89,
+    "brightness": 0.82,
     "texture": 0.35,
-    "valence": 0.81,
-    "arousal": 0.33,
-    "intensity": 0.45,
-    "geometry": 0.38,
-    "color_temperature": 0.78
+    "valence": 0.90,
+    "arousal": 0.42,
+    "intensity": 0.50,
+    "geometry": 0.30,
+    "color_temperature": 0.88
   },
-  "model": "vibe-engine-v2"
+  "model": "vibe-engine-v7"
 }
 ```
 
@@ -60,67 +62,92 @@ curl -X POST https://vibe-engine-production.up.railway.app/api/batch \
 
 ```
 vibemodel/
-├── models/           # Trained PyTorch models
-│   ├── best_vibe_model_v5.pth          # Latest (96.6% accuracy)
-│   ├── best_vibe_model_v3.pth          # Production (94.7% accuracy)
-│   └── best_vibe_model_v2.pth          # Deployed version
-├── training/         # Training scripts
-│   ├── build_ultimate_vibe_dataset.py  # Dataset generation
-│   ├── train_massive_vibe_model.py     # Attention-based trainer
-│   ├── acquire_academic_vibe_data.py   # Academic dataset acquisition
-│   └── expand_vibe_domains.py          # Domain expansion
-├── data/            # Training datasets
-│   ├── ultimate_vibe_training_data.csv # 5000 curated examples
-│   └── final_enhanced_vibe_data.csv    # 1050 high-quality examples
-├── api/             # Flask API server
-│   ├── simple_vibe_backend.py
+├── models/
+│   ├── best_vibe_model_v7.pth           # 100% accuracy model
+│   └── best_vibe_model_v7_metadata.json # Training metadata
+├── training/
+│   └── train_vibe_model.py              # Training script with test suite
+├── data/
+│   └── ultimate_vibe_training_data_v3.csv  # 5,476 training examples
+├── api/
+│   ├── simple_vibe_backend.py           # Flask API server
+│   ├── best_vibe_model_v7.pth           # Model copy for deployment
 │   └── requirements.txt
-└── docs/            # Documentation
+└── docs/
+    ├── VIBE_ENGINE_MASTERDOC.md
+    └── vibe-engine-offering.md
 ```
 
 ## Model Architecture
 
-The Vibe Engine uses a multi-head neural network built on sentence-transformer embeddings:
-
 ```
-Text → all-MiniLM-L6-v2 (384-dim) → Shared Backbone → 8 Dimension Heads → Sigmoid
+Text → all-MiniLM-L6-v2 (384-dim) → Backbone (512→256) → 8 Heads → Sigmoid
 ```
 
-- **Embedder**: `sentence-transformers/all-MiniLM-L6-v2` (384 dimensions)
-- **Backbone**: 512 → 256 with LayerNorm and Dropout
-- **Heads**: Separate prediction head per dimension with Sigmoid activation
-- **Output**: 8 values in [0, 1] range
+```python
+class VibeModel(nn.Module):
+    def __init__(self, embedding_dim=384, vibe_dim=8):
+        super().__init__()
+        self.backbone = nn.Sequential(
+            nn.Linear(embedding_dim, 512),
+            nn.GELU(),
+            nn.LayerNorm(512),
+            nn.Dropout(0.15),
+            nn.Linear(512, 256),
+            nn.GELU(),
+            nn.LayerNorm(256),
+            nn.Dropout(0.1),
+        )
+        self.heads = nn.ModuleList([
+            nn.Sequential(
+                nn.Linear(256, 128),
+                nn.GELU(),
+                nn.Linear(128, 1),
+                nn.Sigmoid()
+            ) for _ in range(vibe_dim)
+        ])
+```
+
+Key design choices:
+- **LayerNorm** (not BatchNorm) - works with single-sample inference
+- **Separate heads** per dimension - allows independent learning
+- **GELU activation** - smooth gradients for aesthetic data
+- **Sigmoid output** - bounded [0, 1] range
 
 ## Training Data
 
-The model is trained on ~5000 curated examples covering:
+5,476 curated examples covering:
 
 1. **Physical Sensations** - Temperature, texture, brightness
 2. **Emotional States** - Joy, grief, nostalgia, anxiety
-3. **Scenes & Environments** - Kitchens, forests, cities, hospitals
+3. **Scenes & Environments** - Kitchens, forests, cities
 4. **Art & Music** - Jazz, punk, ambient, classical
 5. **Food & Beverages** - Coffee, wine, spices
 6. **Fashion & Interiors** - Fabrics, furniture, lighting
 7. **Weather & Nature** - Storms, sunsets, seasons
+8. **Architecture** - Brutalist, organic, minimalist
+
+Multi-dimensional examples where each training sample exercises 4+ dimensions simultaneously.
 
 ## Performance
 
 | Version | Test Accuracy | Training Examples | Notes |
 |---------|--------------|-------------------|-------|
-| v5 | 96.6% | 5,000 | Attention-based architecture |
-| v3 | 94.7% | 1,135 | Production-deployed |
-| v2 | 87.5% | 1,050 | First multi-dimensional model |
+| **v7** | **100%** | 5,476 | Current production model |
+| v6 | 97.3% | 4,532 | 4 edge case failures |
+| v5 | 96.6% | 5,000 | First attention-based |
 
-### Known Strengths
-- Temperature (warmth/cold) - excellent
-- Brightness/darkness - excellent
-- Valence (positive/negative emotion) - very good
-- Arousal (calm/energetic) - very good
+### Test Suite
 
-### Areas for Improvement
-- Complex emotional states (bittersweet, anxious anticipation)
-- Abstract intensity ("the weight of unspoken words")
-- Context-dependent brightness (2am bar should be dim)
+The model passes 104 test cases across:
+- Temperature extremes ("freezing cold" → "blazing hot")
+- Brightness range ("pitch black" → "blinding white")
+- Texture spectrum ("silky smooth" → "rough sandpaper")
+- Emotional valence ("crushing despair" → "pure ecstatic joy")
+- Arousal levels ("deep meditative calm" → "heart-pounding excitement")
+- Intensity ("gentle whisper" → "overwhelming catastrophe")
+- Geometric shapes ("flowing organic curves" → "sharp geometric edges")
+- Complex scenes ("grandmother's kitchen" → "abandoned factory in rain")
 
 ## Local Development
 
@@ -138,33 +165,39 @@ curl -X POST http://localhost:5000/api/analyze \
   -d '{"text": "peaceful garden at sunrise"}'
 ```
 
-## Training Your Own Model
+## Train Your Own
 
-```python
-from sentence_transformers import SentenceTransformer
-import torch
-import pandas as pd
-
-# Load training data
-df = pd.read_csv('data/ultimate_vibe_training_data.csv')
-
-# Load embedder
-embedder = SentenceTransformer('all-MiniLM-L6-v2')
-embeddings = embedder.encode(df['text'].tolist())
-
-# Define model (see training/train_massive_vibe_model.py)
-# Train and evaluate
+```bash
+cd training
+python train_vibe_model.py
 ```
+
+Edit `train_vibe_model.py` to point to your training data:
+```python
+train(
+    data_path='../data/ultimate_vibe_training_data_v3.csv',
+    output_path='../models/best_vibe_model_v7.pth'
+)
+```
+
+## Deploy to Railway
+
+```bash
+# In api/ directory
+railway login
+railway init
+railway up
+```
+
+The API automatically uses the `PORT` environment variable.
 
 ## Citation
 
-If you use this in research, please cite:
-
 ```
-@software{vibeengine2024,
+@software{vibeengine2025,
   title = {Vibe Engine: 8-Dimensional Aesthetic Text Analysis},
-  author = {Erin St. Gull},
-  year = {2024},
+  author = {Erin Saint Gull},
+  year = {2025},
   url = {https://github.com/saintgull/vibemodel}
 }
 ```
@@ -172,3 +205,9 @@ If you use this in research, please cite:
 ## License
 
 MIT License - See LICENSE file for details.
+
+## Author
+
+**Erin Saint Gull**
+- Website: [synthesis.baby](https://synthesis.baby)
+- Email: erin@curate.beauty
