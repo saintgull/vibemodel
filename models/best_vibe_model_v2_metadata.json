@@ -1,0 +1,14 @@
+{
+  "accuracy": 100.0,
+  "examples": 892,
+  "dimensions": [
+    "warmth",
+    "brightness",
+    "texture",
+    "valence",
+    "arousal",
+    "intensity",
+    "geometry",
+    "color_temperature"
+  ]
+}

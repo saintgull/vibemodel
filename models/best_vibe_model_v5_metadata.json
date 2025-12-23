@@ -1,0 +1,17 @@
+{
+  "model": "VibeModelV5",
+  "test_accuracy": 0.9659863945578231,
+  "best_epoch": 30,
+  "training_examples": 4500,
+  "timestamp": "2025-12-23T17:54:02.136329",
+  "dimensions": [
+    "warmth",
+    "brightness",
+    "texture",
+    "valence",
+    "arousal",
+    "intensity",
+    "geometry",
+    "color_temperature"
+  ]
+}
