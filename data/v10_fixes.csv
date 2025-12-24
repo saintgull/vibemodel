@@ -1,0 +1,66 @@
+text,warmth,brightness,texture,valence,arousal,intensity,geometry,color_temperature
+lo-fi hip hop study beats,0.45,0.4,0.35,0.6,0.25,0.45,0.4,0.45
+lofi study music,0.5,0.35,0.3,0.55,0.2,0.4,0.35,0.5
+chill lo-fi beats to study to,0.5,0.4,0.3,0.6,0.22,0.42,0.35,0.5
+relaxing lo-fi hip hop,0.55,0.4,0.3,0.6,0.25,0.4,0.4,0.55
+lo-fi chill beats,0.5,0.38,0.32,0.58,0.23,0.42,0.38,0.5
+study music playlist,0.5,0.45,0.35,0.55,0.2,0.35,0.4,0.5
+late night study session music,0.45,0.3,0.35,0.5,0.22,0.4,0.4,0.45
+coffee shop study vibes,0.55,0.45,0.35,0.6,0.28,0.45,0.4,0.55
+lo-fi beats,0.48,0.38,0.32,0.58,0.22,0.4,0.38,0.48
+lofi hip hop radio,0.5,0.4,0.3,0.6,0.2,0.38,0.35,0.5
+chill beats to relax study to,0.52,0.42,0.3,0.62,0.2,0.4,0.35,0.52
+lo-fi aesthetic music,0.5,0.38,0.32,0.58,0.25,0.42,0.38,0.5
+calm study playlist,0.52,0.45,0.32,0.6,0.18,0.35,0.38,0.52
+relaxing background music,0.55,0.48,0.3,0.62,0.2,0.35,0.35,0.55
+mellow study beats,0.5,0.4,0.28,0.6,0.22,0.38,0.35,0.5
+peaceful lo-fi,0.52,0.42,0.28,0.65,0.18,0.35,0.32,0.52
+ambient study music,0.5,0.4,0.25,0.6,0.15,0.3,0.35,0.5
+soft background beats,0.52,0.42,0.25,0.62,0.18,0.32,0.35,0.52
+3am existential crisis,0.35,0.15,0.6,0.2,0.82,0.88,0.6,0.35
+existential crisis at night,0.3,0.1,0.55,0.18,0.8,0.85,0.55,0.3
+late night existential dread,0.3,0.12,0.58,0.15,0.78,0.85,0.55,0.32
+3am anxiety spiral,0.32,0.1,0.6,0.12,0.88,0.9,0.6,0.3
+sleepless existential terror,0.28,0.08,0.65,0.1,0.85,0.92,0.65,0.28
+midnight panic attack,0.3,0.1,0.6,0.08,0.95,0.95,0.6,0.3
+2am overthinking everything,0.35,0.15,0.55,0.22,0.75,0.8,0.55,0.35
+dark night of the soul,0.25,0.08,0.6,0.15,0.7,0.85,0.55,0.28
+existential crisis,0.32,0.12,0.58,0.18,0.8,0.88,0.58,0.32
+crisis of meaning,0.3,0.15,0.55,0.15,0.78,0.85,0.55,0.3
+spiraling thoughts at night,0.32,0.1,0.58,0.2,0.82,0.85,0.55,0.32
+racing anxious mind,0.35,0.2,0.6,0.18,0.88,0.85,0.55,0.35
+overwhelming dread,0.28,0.1,0.65,0.1,0.85,0.92,0.6,0.28
+can't sleep anxiety,0.32,0.12,0.58,0.15,0.8,0.85,0.55,0.32
+mental breakdown,0.25,0.15,0.7,0.05,0.9,0.95,0.65,0.25
+nervous breakdown,0.28,0.15,0.68,0.08,0.88,0.92,0.62,0.28
+neon tokyo cyberpunk rain,0.35,0.7,0.55,0.5,0.8,0.88,0.8,0.35
+cyberpunk rain neon lights,0.32,0.75,0.5,0.52,0.82,0.85,0.78,0.32
+rainy neon city night,0.35,0.65,0.5,0.48,0.75,0.82,0.75,0.35
+tokyo rain neon reflections,0.38,0.7,0.48,0.5,0.78,0.85,0.78,0.38
+blade runner rain aesthetic,0.3,0.6,0.55,0.45,0.75,0.88,0.82,0.3
+neon soaked rainy streets,0.32,0.68,0.5,0.48,0.78,0.85,0.78,0.32
+cyberpunk alley rain,0.3,0.55,0.55,0.42,0.72,0.85,0.8,0.3
+electric rain in the city,0.35,0.65,0.5,0.5,0.75,0.82,0.75,0.35
+industrial techno warehouse,0.3,0.4,0.75,0.45,0.92,0.95,0.85,0.3
+dark techno rave,0.28,0.25,0.8,0.4,0.95,0.98,0.85,0.25
+underground warehouse party,0.35,0.3,0.7,0.55,0.9,0.92,0.8,0.35
+berlin techno club,0.3,0.25,0.75,0.5,0.92,0.95,0.82,0.28
+hard industrial beats,0.25,0.35,0.85,0.4,0.95,0.98,0.88,0.25
+pounding techno bass,0.28,0.3,0.8,0.45,0.95,0.98,0.85,0.28
+warehouse rave energy,0.32,0.35,0.75,0.55,0.92,0.95,0.82,0.32
+industrial dance floor,0.3,0.35,0.78,0.48,0.9,0.92,0.85,0.3
+techno club at peak hour,0.32,0.4,0.75,0.6,0.95,0.95,0.8,0.32
+bass heavy industrial,0.25,0.3,0.85,0.42,0.92,0.95,0.88,0.25
+four on the floor techno,0.3,0.4,0.72,0.5,0.88,0.9,0.8,0.3
+relentless techno beat,0.28,0.35,0.78,0.45,0.92,0.95,0.82,0.28
+hypnotic warehouse techno,0.3,0.32,0.75,0.48,0.85,0.9,0.8,0.3
+vaporwave mall nostalgia,0.55,0.6,0.4,0.5,0.35,0.55,0.6,0.55
+abandoned mall aesthetic,0.4,0.5,0.45,0.4,0.3,0.6,0.7,0.45
+empty mall at closing time,0.45,0.55,0.4,0.45,0.28,0.5,0.65,0.48
+90s mall memories,0.6,0.65,0.35,0.65,0.4,0.5,0.6,0.6
+liminal mall space,0.4,0.5,0.45,0.35,0.25,0.65,0.7,0.42
+acoustic campfire folk,0.75,0.55,0.3,0.7,0.35,0.45,0.3,0.8
+campfire guitar songs,0.8,0.5,0.28,0.75,0.32,0.42,0.28,0.82
+folk music by the fire,0.78,0.52,0.3,0.72,0.35,0.45,0.3,0.8
+warm acoustic evening,0.82,0.45,0.25,0.7,0.3,0.4,0.25,0.85
+fireside singalong,0.85,0.55,0.28,0.8,0.45,0.5,0.3,0.85

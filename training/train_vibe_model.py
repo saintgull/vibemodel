@@ -102,6 +102,12 @@ def create_test_suite():
         ("abandoned factory in rain", [0.15, 0.30, 0.85, 0.15, 0.30, 0.65, 0.80, 0.25]),
         ("tropical beach at sunset", [0.90, 0.75, 0.40, 0.92, 0.45, 0.60, 0.20, 0.90]),
         ("children laughing in sunshine", [0.88, 0.90, 0.30, 0.95, 0.75, 0.65, 0.25, 0.82]),
+
+        # v10 fixes - specific problem cases
+        ("lo-fi hip hop study beats", [0.45, 0.40, 0.35, 0.60, 0.25, 0.45, 0.40, 0.45]),
+        ("3am existential crisis", [0.35, 0.15, 0.60, 0.20, 0.82, 0.88, 0.60, 0.35]),
+        ("neon tokyo cyberpunk rain", [0.35, 0.70, 0.55, 0.50, 0.80, 0.88, 0.80, 0.35]),
+        ("industrial techno warehouse", [0.30, 0.40, 0.75, 0.45, 0.92, 0.95, 0.85, 0.30]),
     ]
 
 
@@ -213,7 +219,7 @@ def train(data_path, output_path='best_vibe_model.pth', epochs=100, batch_size=6
 
 
 if __name__ == "__main__":
-    train(
-        data_path='../data/ultimate_vibe_training_data_v3.csv',
-        output_path='../models/best_vibe_model_v7.pth'
-    )
+    import sys
+    data_path = sys.argv[1] if len(sys.argv) > 1 else '../data/ultimate_vibe_training_data_v10.csv'
+    output_path = sys.argv[2] if len(sys.argv) > 2 else '../api/best_vibe_model_v10.pth'
+    train(data_path=data_path, output_path=output_path)
