@@ -1,3 +1,4 @@
+# Vibe Engine v11 dependencies
 flask==2.3.3
 flask-cors==4.0.0
 numpy>=1.26.0
