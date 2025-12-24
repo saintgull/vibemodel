@@ -1,0 +1,8 @@
+[build]
+builder = "NIXPACKS"
+watchPatterns = ["api/**"]
+
+[deploy]
+startCommand = "cd api && gunicorn simple_vibe_backend:app"
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10
