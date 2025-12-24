@@ -12,6 +12,8 @@ import torch
 import torch.nn as nn
 from sentence_transformers import SentenceTransformer
 import os
+import json
+from datetime import datetime
 
 app = Flask(__name__)
 CORS(app, origins=[
@@ -80,12 +82,13 @@ def predict_vibes(text: str) -> dict:
 def index():
     return jsonify({
         'name': 'Vibe Engine API',
-        'version': '9.0',
+        'version': '10.0',
         'accuracy': '100%',
         'dimensions': DIMENSIONS,
         'endpoints': {
             '/api/analyze': 'POST - Analyze text vibes',
             '/api/batch': 'POST - Analyze multiple texts (max 100)',
+            '/api/feedback': 'POST/GET - Submit or retrieve RLHF feedback',
             '/health': 'GET - Health check'
         }
     })
@@ -155,6 +158,62 @@ def health():
         'accuracy': '100%',
         'dimensions': len(DIMENSIONS)
     })
+
+
+# RLHF Feedback endpoint
+FEEDBACK_FILE = os.path.join(os.path.dirname(__file__), 'feedback.json')
+
+@app.route('/api/feedback', methods=['POST'])
+def submit_feedback():
+    try:
+        data = request.get_json()
+
+        # Add server timestamp
+        data['server_timestamp'] = datetime.utcnow().isoformat()
+
+        # Load existing feedback
+        feedback_list = []
+        if os.path.exists(FEEDBACK_FILE):
+            try:
+                with open(FEEDBACK_FILE, 'r') as f:
+                    feedback_list = json.load(f)
+            except:
+                feedback_list = []
+
+        # Append new feedback
+        feedback_list.append(data)
+
+        # Save feedback
+        with open(FEEDBACK_FILE, 'w') as f:
+            json.dump(feedback_list, f, indent=2)
+
+        print(f"Feedback received: {data.get('feedback_type')} for '{data.get('text', '')[:50]}'")
+
+        return jsonify({
+            'status': 'success',
+            'message': 'Feedback saved',
+            'total_feedback': len(feedback_list)
+        })
+
+    except Exception as e:
+        print(f"Error saving feedback: {e}")
+        return jsonify({'error': str(e)}), 500
+
+
+@app.route('/api/feedback', methods=['GET'])
+def get_feedback():
+    """Get all feedback (for training data export)."""
+    try:
+        if os.path.exists(FEEDBACK_FILE):
+            with open(FEEDBACK_FILE, 'r') as f:
+                feedback_list = json.load(f)
+            return jsonify({
+                'feedback': feedback_list,
+                'count': len(feedback_list)
+            })
+        return jsonify({'feedback': [], 'count': 0})
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
 
 
 if __name__ == '__main__':
