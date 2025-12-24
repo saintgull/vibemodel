@@ -1,0 +1,177 @@
+text,warmth,brightness,texture,valence,arousal,intensity,geometry,color_temperature
+# INTENSE NEGATIVE EMOTIONS → HIGH GEOMETRY (angular, sharp, jagged)
+screaming crying,0.35,0.45,0.65,0.10,0.95,0.95,0.88,0.40
+screaming in agony,0.30,0.50,0.70,0.05,0.98,0.98,0.92,0.35
+hysterical crying,0.40,0.40,0.60,0.12,0.90,0.92,0.85,0.45
+sobbing uncontrollably,0.42,0.35,0.55,0.15,0.85,0.88,0.82,0.45
+wailing in grief,0.35,0.30,0.60,0.08,0.88,0.90,0.85,0.40
+shrieking terror,0.25,0.55,0.75,0.05,0.98,0.98,0.95,0.30
+blood curdling scream,0.20,0.60,0.80,0.02,0.99,0.99,0.95,0.25
+primal scream,0.35,0.50,0.75,0.15,0.95,0.95,0.90,0.40
+anguished cry,0.38,0.40,0.65,0.10,0.88,0.90,0.85,0.42
+desperate screaming,0.30,0.50,0.70,0.08,0.95,0.95,0.90,0.35
+# PANIC AND TERROR → HIGH GEOMETRY
+panic attack,0.35,0.55,0.70,0.10,0.95,0.95,0.88,0.38
+blind panic,0.30,0.60,0.72,0.08,0.98,0.95,0.90,0.32
+sheer terror,0.25,0.50,0.75,0.05,0.95,0.98,0.92,0.28
+paralyzed with fear,0.28,0.35,0.65,0.08,0.85,0.90,0.85,0.30
+heart-pounding terror,0.30,0.55,0.70,0.08,0.95,0.95,0.88,0.32
+absolute horror,0.22,0.40,0.78,0.03,0.90,0.98,0.92,0.25
+nightmare terror,0.25,0.25,0.75,0.05,0.88,0.95,0.90,0.28
+jump scare,0.30,0.70,0.75,0.20,0.99,0.95,0.92,0.35
+sudden shock,0.35,0.65,0.70,0.25,0.98,0.92,0.90,0.38
+jarring alarm,0.30,0.70,0.72,0.20,0.95,0.90,0.88,0.32
+# RAGE AND ANGER → HIGH GEOMETRY
+explosive rage,0.45,0.60,0.80,0.08,0.98,0.98,0.92,0.55
+blind fury,0.40,0.55,0.78,0.10,0.95,0.98,0.90,0.50
+seething anger,0.50,0.45,0.72,0.15,0.85,0.92,0.88,0.55
+violent outburst,0.42,0.60,0.82,0.08,0.98,0.98,0.92,0.48
+uncontrollable rage,0.45,0.55,0.80,0.05,0.95,0.98,0.92,0.52
+white hot anger,0.55,0.75,0.75,0.10,0.92,0.95,0.90,0.60
+furious screaming,0.40,0.60,0.78,0.08,0.98,0.98,0.92,0.48
+aggressive confrontation,0.38,0.55,0.75,0.15,0.90,0.92,0.88,0.42
+bitter resentment,0.35,0.40,0.68,0.12,0.70,0.85,0.82,0.40
+burning hatred,0.48,0.50,0.75,0.05,0.82,0.95,0.90,0.52
+# ANXIETY AND STRESS → HIGH GEOMETRY
+crippling anxiety,0.32,0.45,0.68,0.12,0.88,0.90,0.85,0.35
+racing thoughts,0.40,0.55,0.65,0.25,0.92,0.85,0.82,0.42
+anxious spiral,0.35,0.50,0.68,0.15,0.90,0.88,0.85,0.38
+overwhelming stress,0.38,0.50,0.70,0.15,0.88,0.92,0.85,0.40
+nervous breakdown,0.35,0.45,0.72,0.08,0.92,0.95,0.88,0.38
+mental anguish,0.32,0.40,0.70,0.10,0.85,0.92,0.88,0.35
+psychological torment,0.28,0.35,0.75,0.05,0.82,0.95,0.90,0.30
+intrusive thoughts,0.35,0.50,0.68,0.18,0.85,0.85,0.82,0.38
+fight or flight,0.38,0.60,0.70,0.25,0.95,0.90,0.88,0.42
+adrenaline spike,0.42,0.65,0.68,0.35,0.98,0.88,0.85,0.45
+# PAIN AND SUFFERING → HIGH GEOMETRY
+sharp stabbing pain,0.25,0.55,0.85,0.02,0.92,0.98,0.95,0.30
+searing pain,0.55,0.60,0.82,0.02,0.90,0.98,0.92,0.60
+excruciating agony,0.30,0.50,0.85,0.02,0.88,0.98,0.95,0.35
+throbbing headache,0.40,0.45,0.75,0.10,0.75,0.88,0.85,0.42
+piercing migraine,0.35,0.55,0.80,0.05,0.80,0.92,0.90,0.38
+gut-wrenching pain,0.38,0.45,0.78,0.05,0.85,0.95,0.92,0.40
+bone-deep ache,0.35,0.35,0.72,0.10,0.65,0.88,0.85,0.38
+electric shock pain,0.32,0.70,0.85,0.05,0.95,0.95,0.92,0.35
+burning sensation,0.60,0.55,0.78,0.08,0.82,0.90,0.88,0.65
+raw nerve pain,0.35,0.55,0.82,0.05,0.88,0.95,0.92,0.38
+# HARSH SOUNDS → HIGH GEOMETRY
+nails on chalkboard,0.25,0.55,0.92,0.02,0.85,0.95,0.95,0.28
+ear-splitting noise,0.30,0.65,0.88,0.05,0.95,0.98,0.92,0.32
+harsh static,0.28,0.50,0.85,0.15,0.78,0.88,0.88,0.30
+jarring discord,0.32,0.55,0.82,0.10,0.82,0.90,0.90,0.35
+cacophonous noise,0.35,0.55,0.85,0.12,0.85,0.92,0.88,0.38
+screeching brakes,0.30,0.60,0.88,0.08,0.92,0.92,0.92,0.32
+grinding metal,0.28,0.45,0.90,0.10,0.80,0.90,0.92,0.30
+feedback squeal,0.32,0.65,0.85,0.10,0.88,0.90,0.90,0.35
+distorted clipping,0.35,0.55,0.82,0.20,0.82,0.88,0.88,0.38
+harsh industrial noise,0.28,0.45,0.90,0.15,0.85,0.92,0.92,0.30
+# AGGRESSIVE MUSIC → HIGH GEOMETRY
+death metal blast beats,0.30,0.45,0.88,0.25,0.98,0.98,0.92,0.32
+hardcore punk breakdown,0.35,0.50,0.85,0.30,0.95,0.95,0.90,0.38
+aggressive dubstep drop,0.32,0.60,0.82,0.35,0.98,0.95,0.88,0.35
+thrash metal riff,0.35,0.55,0.85,0.30,0.95,0.95,0.90,0.38
+industrial harsh noise,0.28,0.45,0.90,0.18,0.88,0.95,0.92,0.30
+gabber kick drum,0.32,0.55,0.85,0.25,0.98,0.95,0.90,0.35
+speedcore assault,0.30,0.60,0.88,0.22,0.99,0.98,0.92,0.32
+grindcore chaos,0.32,0.50,0.90,0.20,0.98,0.98,0.92,0.35
+power electronics harsh,0.28,0.50,0.92,0.15,0.85,0.95,0.95,0.30
+noise wall texture,0.30,0.45,0.95,0.18,0.75,0.92,0.92,0.32
+# DIGITAL/GLITCH → HIGH GEOMETRY
+digital glitch artifacts,0.35,0.65,0.78,0.35,0.72,0.80,0.88,0.38
+corrupted data aesthetic,0.32,0.55,0.80,0.30,0.65,0.82,0.90,0.35
+pixelated distortion,0.38,0.60,0.75,0.35,0.68,0.78,0.88,0.40
+broken screen effect,0.35,0.65,0.82,0.25,0.70,0.85,0.90,0.38
+harsh digital noise,0.30,0.55,0.85,0.22,0.75,0.88,0.90,0.32
+bitcrushed audio,0.35,0.50,0.82,0.28,0.72,0.85,0.88,0.38
+aliasing artifacts,0.38,0.60,0.78,0.32,0.68,0.80,0.88,0.40
+jpeg compression harsh,0.40,0.55,0.75,0.30,0.60,0.75,0.85,0.42
+vhs tracking glitch,0.45,0.50,0.72,0.40,0.62,0.72,0.82,0.48
+databending corruption,0.35,0.55,0.80,0.28,0.68,0.82,0.88,0.38
+# VIOLENT/DESTRUCTIVE → HIGH GEOMETRY
+shattering glass,0.30,0.70,0.88,0.15,0.92,0.95,0.95,0.32
+explosion impact,0.55,0.85,0.85,0.20,0.98,0.98,0.92,0.60
+violent collision,0.40,0.60,0.85,0.10,0.95,0.98,0.92,0.45
+breaking apart,0.35,0.55,0.80,0.20,0.85,0.90,0.88,0.38
+crashing destruction,0.40,0.65,0.85,0.15,0.92,0.95,0.92,0.45
+splintering wood,0.45,0.50,0.82,0.20,0.85,0.88,0.88,0.48
+crumbling concrete,0.35,0.45,0.80,0.18,0.75,0.85,0.88,0.38
+tearing metal,0.30,0.50,0.88,0.12,0.88,0.92,0.92,0.32
+fracturing ice,0.18,0.75,0.85,0.30,0.82,0.88,0.90,0.20
+snapping bones,0.35,0.45,0.90,0.02,0.88,0.98,0.95,0.38
+# SOFT GENTLE EMOTIONS → LOW GEOMETRY (organic, curved, flowing)
+peaceful serenity,0.65,0.60,0.25,0.85,0.15,0.30,0.15,0.68
+calm tranquility,0.62,0.55,0.22,0.82,0.12,0.25,0.12,0.65
+deep inner peace,0.60,0.50,0.20,0.88,0.10,0.22,0.10,0.62
+serene meditation,0.58,0.45,0.18,0.85,0.08,0.20,0.08,0.60
+gentle contentment,0.70,0.55,0.25,0.88,0.18,0.28,0.15,0.72
+soft comfort,0.75,0.50,0.22,0.85,0.15,0.30,0.12,0.78
+warm embrace,0.85,0.45,0.25,0.92,0.25,0.35,0.15,0.88
+tender loving care,0.82,0.50,0.22,0.90,0.22,0.32,0.12,0.85
+nurturing warmth,0.85,0.48,0.25,0.88,0.20,0.30,0.15,0.88
+soothing presence,0.72,0.50,0.20,0.85,0.15,0.25,0.10,0.75
+# DREAMY/ETHEREAL → LOW GEOMETRY
+dreamy haze,0.60,0.55,0.25,0.75,0.18,0.35,0.12,0.62
+ethereal floating,0.55,0.65,0.18,0.78,0.15,0.30,0.10,0.58
+soft focus blur,0.62,0.60,0.20,0.72,0.12,0.28,0.08,0.65
+misty dreamscape,0.58,0.55,0.22,0.70,0.15,0.32,0.10,0.60
+hazy memories,0.65,0.50,0.25,0.65,0.18,0.35,0.12,0.68
+gentle reverie,0.62,0.52,0.22,0.72,0.15,0.30,0.10,0.65
+floating clouds,0.55,0.70,0.15,0.78,0.12,0.25,0.08,0.58
+soft morning mist,0.60,0.55,0.20,0.75,0.12,0.28,0.10,0.62
+twilight softness,0.55,0.40,0.22,0.68,0.15,0.32,0.12,0.58
+fading into sleep,0.65,0.35,0.18,0.72,0.08,0.22,0.08,0.68
+# SOFT SOUNDS → LOW GEOMETRY
+gentle whisper,0.68,0.40,0.15,0.75,0.10,0.18,0.08,0.70
+soft humming,0.72,0.45,0.18,0.78,0.15,0.22,0.10,0.75
+distant wind chimes,0.60,0.55,0.20,0.72,0.18,0.25,0.12,0.62
+quiet rustling leaves,0.55,0.50,0.28,0.70,0.15,0.28,0.15,0.58
+murmuring stream,0.58,0.50,0.25,0.75,0.20,0.30,0.12,0.60
+soft rainfall,0.52,0.45,0.30,0.70,0.22,0.32,0.15,0.55
+gentle lullaby,0.75,0.42,0.18,0.82,0.12,0.25,0.08,0.78
+ambient drone,0.50,0.45,0.25,0.62,0.10,0.30,0.12,0.52
+soft piano notes,0.65,0.50,0.18,0.78,0.18,0.28,0.10,0.68
+muffled distant sounds,0.55,0.40,0.25,0.65,0.12,0.30,0.15,0.58
+# FLOWING/LIQUID → LOW GEOMETRY
+flowing water,0.55,0.60,0.22,0.72,0.25,0.35,0.08,0.58
+gentle waves lapping,0.58,0.55,0.25,0.75,0.28,0.38,0.10,0.60
+smooth liquid motion,0.52,0.55,0.18,0.70,0.22,0.32,0.05,0.55
+rippling reflections,0.55,0.60,0.20,0.72,0.25,0.35,0.08,0.58
+cascading waterfall soft,0.52,0.60,0.28,0.70,0.35,0.42,0.12,0.55
+pooling water,0.50,0.55,0.20,0.68,0.18,0.28,0.05,0.52
+gentle river flow,0.55,0.55,0.22,0.72,0.25,0.32,0.08,0.58
+slow honey drip,0.72,0.50,0.25,0.70,0.12,0.28,0.05,0.75
+melting ice cream,0.68,0.55,0.25,0.72,0.18,0.32,0.08,0.70
+smooth oil surface,0.50,0.55,0.15,0.65,0.10,0.25,0.05,0.52
+# ORGANIC NATURE → LOW GEOMETRY
+rolling hills,0.58,0.60,0.30,0.75,0.20,0.32,0.12,0.60
+soft moss,0.55,0.45,0.35,0.72,0.12,0.28,0.10,0.58
+curved tree branches,0.55,0.50,0.35,0.70,0.18,0.30,0.12,0.58
+rounded river stones,0.50,0.55,0.28,0.68,0.15,0.25,0.10,0.52
+soft petals falling,0.62,0.58,0.20,0.78,0.18,0.28,0.08,0.65
+cloud formations,0.55,0.70,0.18,0.75,0.15,0.28,0.10,0.58
+organic growth patterns,0.58,0.55,0.32,0.72,0.22,0.35,0.12,0.60
+natural curves,0.55,0.55,0.28,0.72,0.18,0.30,0.10,0.58
+winding path,0.55,0.55,0.30,0.70,0.25,0.35,0.15,0.58
+soft sand dunes,0.62,0.65,0.32,0.72,0.18,0.30,0.12,0.65
+# SOFT TEXTURES → LOW GEOMETRY
+velvet touch,0.70,0.45,0.15,0.80,0.15,0.28,0.08,0.72
+silk caress,0.68,0.55,0.10,0.82,0.18,0.25,0.05,0.70
+soft cotton,0.72,0.60,0.18,0.78,0.12,0.25,0.10,0.75
+fluffy clouds,0.60,0.70,0.15,0.80,0.12,0.22,0.08,0.62
+downy feathers,0.70,0.58,0.12,0.82,0.10,0.20,0.05,0.72
+cashmere warmth,0.78,0.50,0.18,0.82,0.15,0.28,0.08,0.80
+plush comfort,0.75,0.52,0.20,0.80,0.18,0.30,0.10,0.78
+soft fur,0.72,0.50,0.22,0.78,0.15,0.28,0.10,0.75
+smooth skin,0.70,0.55,0.12,0.78,0.18,0.25,0.05,0.72
+gentle fabric,0.68,0.52,0.18,0.75,0.15,0.28,0.08,0.70
+# MID-RANGE GEOMETRY CORRECTIONS
+bittersweet nostalgia,0.55,0.45,0.35,0.45,0.25,0.55,0.45,0.58
+melancholy rain,0.45,0.40,0.40,0.35,0.30,0.50,0.40,0.48
+quiet sadness,0.50,0.38,0.35,0.30,0.22,0.48,0.35,0.52
+pensive reflection,0.55,0.45,0.30,0.50,0.20,0.42,0.38,0.58
+wistful longing,0.58,0.48,0.32,0.42,0.28,0.52,0.42,0.60
+subdued grief,0.48,0.38,0.38,0.28,0.25,0.55,0.42,0.50
+tender sorrow,0.55,0.42,0.35,0.32,0.25,0.52,0.38,0.58
+gentle heartache,0.58,0.45,0.35,0.35,0.28,0.55,0.40,0.60
+soft crying,0.50,0.40,0.38,0.25,0.45,0.58,0.48,0.52
+muted despair,0.42,0.35,0.42,0.20,0.35,0.62,0.50,0.45

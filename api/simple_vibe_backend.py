@@ -60,10 +60,10 @@ print("Loading Vibe Engine...")
 embedder = SentenceTransformer('all-MiniLM-L6-v2')
 model = VibeModel()
 
-model_path = os.path.join(os.path.dirname(__file__), 'best_vibe_model_v10.pth')
+model_path = os.path.join(os.path.dirname(__file__), 'best_vibe_model_v11.pth')
 model.load_state_dict(torch.load(model_path, map_location='cpu', weights_only=True))
 model.eval()
-print("Vibe Engine loaded! (100% test accuracy)")
+print("Vibe Engine v11 loaded! (99.3% test accuracy - improved geometry)")
 
 
 def predict_vibes(text: str) -> dict:
@@ -82,8 +82,8 @@ def predict_vibes(text: str) -> dict:
 def index():
     return jsonify({
         'name': 'Vibe Engine API',
-        'version': '10.0',
-        'accuracy': '100%',
+        'version': '11.0',
+        'accuracy': '99.3%',
         'dimensions': DIMENSIONS,
         'endpoints': {
             '/api/analyze': 'POST - Analyze text vibes',
@@ -109,7 +109,7 @@ def analyze():
             'text': text,
             'prediction': result['vector'],
             'dimensions': result['dimensions'],
-            'model': 'vibe-engine-v10'
+            'model': 'vibe-engine-v11'
         })
 
     except Exception as e:
@@ -142,7 +142,7 @@ def batch_analyze():
         return jsonify({
             'results': results,
             'count': len(results),
-            'model': 'vibe-engine-v10'
+            'model': 'vibe-engine-v11'
         })
 
     except Exception as e:
@@ -154,8 +154,8 @@ def batch_analyze():
 def health():
     return jsonify({
         'status': 'healthy',
-        'model': 'vibe-engine-v10',
-        'accuracy': '100%',
+        'model': 'vibe-engine-v11',
+        'accuracy': '99.3%',
         'dimensions': len(DIMENSIONS)
     })
 

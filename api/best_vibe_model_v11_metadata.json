@@ -1,0 +1,17 @@
+{
+  "accuracy": 0.9926470588235294,
+  "correct": 135,
+  "total": 136,
+  "training_examples": 5073,
+  "dimensions": [
+    "warmth",
+    "brightness",
+    "texture",
+    "valence",
+    "arousal",
+    "intensity",
+    "geometry",
+    "color_temperature"
+  ],
+  "timestamp": "2025-12-23T22:08:15.455849"
+}
