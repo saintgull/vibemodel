@@ -11,6 +11,7 @@ venv/
 # PyTorch
 *.pth
 !models/*.pth
+!api/*.pth
 
 # Data (keep CSVs for now, but could exclude large ones)
 # *.csv
